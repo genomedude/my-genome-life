@@ -8,7 +8,6 @@
         body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333; background-color: #f7fafc; }
         header { background: #1A365D; color: #fff; padding: 30px 20px; text-align: center; }
         
-        /* New Logo Styling */
         .logo-container { margin-bottom: 15px; }
         .logo-img { max-width: 180px; height: auto; display: inline-block; }
         
@@ -24,9 +23,12 @@
         .service-card { background: #fff; padding: 35px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; border-top: 5px solid #1A365D; display: flex; flex-direction: column; justify-content: space-between; }
         .service-card.dna { border-top-color: #2B6CB0; }
         .service-card h2 { color: #1A365D; margin-top: 0; font-size: 1.6rem; }
-        .service-card p { color: #4A5568; font-size: 1.1rem; min-height: 80px; }
+        .service-card p { color: #4A5568; font-size: 1.1rem; min-height: 80px; margin-bottom: 15px; }
         
-        .btn { display: inline-block; background: #2B6CB0; color: #fff; padding: 14px 28px; text-decoration: none; font-weight: bold; border-radius: 5px; font-size: 1.1rem; margin-top: 15px; }
+        /* Operating Hours Styling */
+        .hours-badge { display: inline-block; background: #edf2f7; color: #2b6cb0; font-size: 0.95rem; font-weight: bold; padding: 6px 12px; border-radius: 4px; margin-bottom: 20px; }
+        
+        .btn { display: inline-block; background: #2B6CB0; color: #fff; padding: 14px 28px; text-decoration: none; font-weight: bold; border-radius: 5px; font-size: 1.1rem; margin-top: 5px; }
         .btn.dna-btn { background: #2B6CB0; }
         .btn:hover { background: #1A365D; }
         
@@ -65,6 +67,7 @@
                 <div>
                     <h2>Mobile Legal DNA Services</h2>
                     <p>Professional, certified Chain of Custody sample collection delivered directly to private law offices, residences, or business locations across the Houston-Galveston metropolitan area.</p>
+                    <div class="hours-badge">Available: 8:00 AM – 10:00 PM (7 Days a Week)</div>
                 </div>
                 <div>
                     <a href="tel:4099046424" class="btn">Schedule Collection</a>
@@ -75,6 +78,7 @@
                 <div>
                     <h2>Human-Verified Raw Data Audits</h2>
                     <p>Custom manual analysis of your existing 23andMe or MyHeritage raw data text files. We bypass automated software templates to map your exact variants and actionable lifestyle workarounds.</p>
+                    <div class="hours-badge">Available: 8:00 AM – 10:00 PM (7 Days a Week)</div>
                 </div>
                 <div>
                     <a href="tel:4099046424" class="btn dna-btn">Submit Raw Data</a>
