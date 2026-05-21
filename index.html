@@ -3,34 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Genome Life | Mobile Legal DNA & Raw Data Audits</title>
+    <title>My Genome Life LLC</title>
     <style>
         body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333; background-color: #f7fafc; }
-        header { background: #1A365D; color: #fff; padding: 30px 20px; text-align: center; }
-        header h1 { margin: 0; font-size: 2.6rem; letter-spacing: 0.5px; }
-        header p { margin: 5px 0 0 0; font-size: 1.2rem; color: #cbd5e0; }
-        .badge { display: inline-block; background: #48BB78; color: white; padding: 5px 12px; font-weight: bold; border-radius: 4px; margin-top: 10px; text-transform: uppercase; font-size: 0.85rem; }
+        header { background: #1A365D; color: #fff; padding: 40px 20px; text-align: center; }
+        header h1 { margin: 0; font-size: 2.8rem; letter-spacing: 0.5px; }
+        header p { margin: 8px 0 0 0; font-size: 1.3rem; color: #cbd5e0; }
+        .badge { display: inline-block; background: #48BB78; color: white; padding: 6px 14px; font-weight: bold; border-radius: 4px; margin-top: 15px; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; }
+        
         .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
         
-        .blueprint-section { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 40px; border-top: 4px solid #2B6CB0; }
-        .blueprint-section h2 { color: #1A365D; margin-top: 0; }
+        .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
+        @media (max-width: 768px) { .split-grid { grid-template-columns: 1fr; } }
         
-        .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
-        @media (max-width: 768px) { .services-grid { grid-template-columns: 1fr; } }
+        .service-card { background: #fff; padding: 35px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; border-top: 5px solid #1A365D; display: flex; flex-direction: column; justify-content: space-between; }
+        .service-card.dna { border-top-color: #2B6CB0; }
+        .service-card h2 { color: #1A365D; margin-top: 0; font-size: 1.6rem; }
+        .service-card p { color: #4A5568; font-size: 1.1rem; min-height: 80px; }
         
-        .service-column { background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid #1A365D; }
-        .service-column.dna { border-top-color: #2B6CB0; }
-        .service-column h2 { color: #1A365D; margin-top: 0; border-bottom: 2px solid #edf2f7; padding-bottom: 10px; }
+        .btn { display: inline-block; background: #2B6CB0; color: #fff; padding: 14px 28px; text-decoration: none; font-weight: bold; border-radius: 5px; font-size: 1.1rem; margin-top: 15px; }
+        .btn.dna-btn { background: #2B6CB0; }
+        .btn:hover { background: #1A365D; }
         
-        .price-box { background: #f7fafc; border: 1px solid #e2e8f0; border-left: 4px solid #48BB78; padding: 15px; margin: 15px 0; border-radius: 4px; }
-        .price-box h3 { margin: 0 0 5px 0; color: #2D3748; display: flex; justify-content: space-between; font-size: 1.1rem; }
-        .price-tag { color: #2B6CB0; font-weight: bold; }
-        .price-box p { margin: 0; font-size: 0.95rem; color: #4A5568; }
-        .price-box ul { margin: 8px 0 0 0; padding-left: 20px; font-size: 0.9rem; color: #4A5568; }
-        .price-box ul li { margin-bottom: 4px; }
+        .accordion-section { margin-top: 50px; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); padding: 10px 25px; }
+        details { border-bottom: 1px solid #edf2f7; padding: 15px 0; }
+        details:last-of-type { border-bottom: none; }
+        summary { font-size: 1.2rem; font-weight: bold; color: #1A365D; cursor: pointer; outline: none; position: relative; list-style: none; }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '+'; float: right; font-size: 1.4rem; color: #2B6CB0; font-weight: bold; }
+        details[open] summary::after { content: '-'; }
+        details p { margin: 15px 0 0 0; color: #4A5568; font-size: 1rem; }
+        details ul { margin: 10px 0 0 0; padding-left: 20px; color: #4A5568; }
+        details li { margin-bottom: 6px; }
         
-        .btn { display: block; text-align: center; background: #2B6CB0; color: #fff; padding: 14px; text-decoration: none; font-weight: bold; border-radius: 5px; margin-top: 25px; font-size: 1.1rem; }
-        .btn:hover { background: #2c5282; }
+        .disclaimer-box { background: #edf2f7; border-left: 4px solid #718096; padding: 20px; margin-top: 50px; border-radius: 4px; }
+        .disclaimer-box p { margin: 0; font-size: 0.9rem; color: #4A5568; line-height: 1.5; }
+        
         .footer { text-align: center; margin-top: 60px; padding: 30px; font-size: 0.9rem; color: #718096; border-top: 1px solid #e2e8f0; background: #fff; }
     </style>
 </head>
@@ -38,84 +46,64 @@
 
     <header>
         <h1>My Genome Life LLC</h1>
-        <p>Mobile Legal DNA Collection & Raw Data Audits</p>
+        <p>Strategic Genomic Solutions & Certified Mobile Collections</p>
         <div class="badge">U.S. Navy Veteran Owned & Operated</div>
     </header>
 
     <div class="container">
 
-        <div class="blueprint-section">
-            <h2>Your Genetics Are Not Your Destiny</h2>
-            <p><strong>The House Blueprint Analogy:</strong> Think of your DNA as a blueprint for building a house. The blueprint outlines the structural frame, but it does not select the actual materials. It is completely up to you whether you build with cheap components or heavy bricks, mortar, and premium tile. Your raw genetic data is just the paperwork—your vitamins, targeted nutrients, diet, and lifestyle choices are the actual building materials that determine how strong that house stands.</p>
-            <p><strong>Genes Are Tendencies, Not Promises:</strong> Your DNA data only tracks raw vulnerabilities, not your physical reality. For example, many individuals carrying the highest-risk Alzheimer's genes live long, completely sharp lives and never develop the condition. Similarly, some people with MTHFR mutations process synthetic folic acid seamlessly with zero issues. Even if your genes report a specific tendency, you possess custom biological switches that can be flipped on or off through proper workarounds.</p>
-        </div>
-
-        <div class="services-grid">
-
-            <div class="service-column">
-                <h2>1. Mobile Legal DNA Services</h2>
-                <p>We resolve the logistical hassle of court testing by delivering professional, certified sample collection directly to your private law office, home, or business location across the Houston-Galveston metropolitan area.</p>
-                
-                <div class="price-box" style="border-left-color: #1A365D;">
-                    <h3>Strict Chain of Custody</h3>
-                    <p>Full identity verification, formal documentation, and facial photographs compliant with Texas Family Code requirements.</p>
+        <div class="split-grid">
+            <div class="service-card">
+                <div>
+                    <h2>Mobile Legal DNA Services</h2>
+                    <p>Professional, certified Chain of Custody sample collection delivered directly to private law offices, residences, or business locations across the Houston-Galveston metropolitan area.</p>
                 </div>
-
-                <div class="price-box" style="border-left-color: #1A365D;">
-                    <h3>AABB-Accredited Analysis</h3>
-                    <p>All laboratory testing is executed through elite partner facilities to ensure results are 100% valid for family courts, custody, and child support proceedings.</p>
-                </div>
-                
-                <p style="font-size: 0.95rem; margin-top: 15px; color: #4A5568;">Perfect for independent family law practitioners, court representatives, and private clients demanding immediate collection compliance without crowded public clinics.</p>
-            </div>
-
-            <div class="service-column dna">
-                <h2>2. Human-Verified Raw Data Audits</h2>
-                <p>Automated software printouts just look at basic grids. We perform custom manual text audits of your existing raw data files (from 23andMe, MyHeritage, etc.) to isolate your exact variants and map out clean, logical workarounds.</p>
-
-                <div class="price-box">
-                    <h3>Foundational Methylation <span class="price-tag">$150</span></h3>
-                    <p>Manual review of 4 critical genetic markers affecting baseline mental and physical energy production:</p>
-                    <ul>
-                        <li><strong>MTHFR:</strong> Cellular methylation foundation.</li>
-                        <li><strong>COMT:</strong> Brain chemical clearance, mood, and stress.</li>
-                        <li><strong>APOE:</strong> Baseline longevity and cognitive health.</li>
-                        <li><strong>Homocysteine processing:</strong> Core internal inflammation.</li>
-                    </ul>
-                </div>
-
-                <div class="price-box">
-                    <h3>Comprehensive Data Audit <span class="price-tag">$399</span></h3>
-                    <p>Deep manual exploration of 10 strategic health, trait, and nutritional pathways:</p>
-                    <ul>
-                        <li>Includes all 4 foundational methylation markers.</li>
-                        <li><strong>Caffeine clearance speed:</strong> Liver processing configuration.</li>
-                        <li><strong>Dopamine receptors:</strong> Focus, drive, and reward pathways.</li>
-                        <li><strong>Adrenaline responses:</strong> Nervous system sensitivity.</li>
-                        <li><strong>Vitamin D3:</strong> Natural baseline absorption efficiency.</li>
-                        <li><strong>Dietary fat processing:</strong> Response to animal fats.</li>
-                        <li><strong>Plant oxalates:</strong> Sensitivity to specific vegetable defenses.</li>
-                    </ul>
-                </div>
-
-                <div class="price-box">
-                    <h3>Circadian & Metabolic Add-On <span class="price-tag">+$75</span></h3>
-                    <p>Focused upgrade mapping 4 vital sleep and blood sugar pathways:</p>
-                    <ul>
-                        <li><strong>CLOCK gene:</strong> Natural night owl or morning lark status.</li>
-                        <li><strong>Melatonin receptors:</strong> Sleep signal sensitivity tracking.</li>
-                        <li><strong>Morning adrenaline:</strong> Triggers for sudden wake-up anxiety.</li>
-                        <li><strong>TCF7L2 gene:</strong> Uncovering stubborn baseline blood sugar numbers.</li>
-                    </ul>
+                <div>
+                    <a href="tel:4099046424" class="btn">Schedule Collection</a>
                 </div>
             </div>
 
+            <div class="service-card dna">
+                <div>
+                    <h2>Human-Verified Raw Data Audits</h2>
+                    <p>Custom manual analysis of your existing 23andMe or MyHeritage raw data text files. We bypass automated software templates to map your exact variants and actionable lifestyle workarounds.</p>
+                </div>
+                <div>
+                    <a href="tel:4099046424" class="btn dna-btn">Submit Raw Data</a>
+                </div>
+            </div>
         </div>
 
-        <p style="text-align: center; margin-top: 40px; font-size: 1.2rem;">
-            <strong>Ready to book a mobile legal collection or submit your raw text data file?</strong><br>
-            <a href="tel:4099046424" class="btn">Call or Text: 409-904-6424</a>
-        </p>
+        <div class="accordion-section">
+            <details>
+                <summary>How Our Raw Data Audits Work</summary>
+                <p>Automated reporting platforms generate static, computer-generated text walls. We manually audit your raw data text files point-by-point to evaluate your structural configuration, verify variants, and cross-reference indicators with your day-to-day health routines.</p>
+            </details>
+            <style>
+                .inline-tag { color: #2B6CB0; font-weight: bold; float: right; font-size: 0.95rem; }
+            </style>
+            <details>
+                <summary>Service Packages & Pricing</summary>
+                <p>We provide clear, tiered pricing structures based on the depth of your manual review:</p>
+                <ul>
+                    <li><strong>Foundational Methylation ($150):</strong> Focused manual audit of 4 essential genetic markers including MTHFR, COMT, APOE, and core Homocysteine processing.</li>
+                    <li><strong>Comprehensive Variant Audit ($399):</strong> Full exploration of 10 strategic lifestyle pathways, including dopamine receptors, adrenaline responses, caffeine clearance speed, vitamin D3 absorption efficiency, plant oxalate sensitivities, and dietary fat processing.</li>
+                    <li><strong>Circadian & Metabolic Panel (+$75 Add-On):</strong> Specialized upgrade analyzing target sleep and blood sugar pathways, including the CLOCK gene, melatonin receptor sensitivity, morning adrenaline triggers, and the TCF7L2 gene configuration.</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Understanding Genetic Blueprints</summary>
+                <p>Think of your DNA as a blueprint for building a house. The blueprint outlines the structural frame, but it does not select the final building components. It is entirely up to you whether you build with low-grade materials or sturdy bricks, mortar, and premium tile. Your raw data is just the paperwork—your vitamins, custom nutrients, diet choices, and environment act as the physical building materials that determine how that house actually stands.</p>
+            </details>
+            <details>
+                <summary>Genes Are Tendencies, Not Certainties</summary>
+                <p>Your raw data tracks genetic vulnerabilities, not your absolute physical destiny. For instance, many individuals carrying the highest-risk Alzheimer's markers maintain pristine cognitive sharpness and never develop the condition. Similarly, some people with MTHFR variations process synthetic folic acid seamlessly with zero issues. Your body possesses biological switches that can be flipped on or off through proper workarounds.</p>
+            </details>
+        </div>
+
+        <div class="disclaimer-box">
+            <p><strong>Informational Disclaimer:</strong> My Genome Life LLC provides professional mobile collection and informational genomic data audits. The analysis, variant tracking, and lifestyle workaround insights provided on this platform are strictly for informational and educational purposes. We do not provide medical advice, diagnostic services, or treatment protocols. This service is not a substitute for professional medical evaluation, diagnosis, or advice.</p>
+        </div>
 
     </div>
 
