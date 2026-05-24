@@ -1,143 +1,206 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Genome Life LLC</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333; background-color: #f7fafc; }
-        header { background: #1A365D; color: #fff; padding: 30px 20px; text-align: center; }
-        
-        .logo-container { margin-bottom: 15px; }
-        .logo-img { max-width: 180px; height: auto; display: inline-block; }
-        
-        header h1 { margin: 0; font-size: 2.8rem; letter-spacing: 0.5px; }
-        header p { margin: 8px 0 0 0; font-size: 1.3rem; color: #cbd5e0; }
-        .badge { display: inline-block; background: #48BB78; color: white; padding: 6px 14px; font-weight: bold; border-radius: 4px; margin-top: 15px; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; }
-        
-        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
-        
-        .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
-        @media (max-width: 768px) { .split-grid { grid-template-columns: 1fr; } }
-        
-        .service-card { background: #fff; padding: 35px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; border-top: 5px solid #1A365D; display: flex; flex-direction: column; justify-content: space-between; }
-        .service-card.dna { border-top-color: #2B6CB0; }
-        .service-card h2 { color: #1A365D; margin-top: 0; font-size: 1.6rem; }
-        .service-card p { color: #4A5568; font-size: 1.1rem; min-height: 80px; margin-bottom: 15px; }
-        
-        /* Operating Hours Styling */
-        .hours-badge { display: inline-block; background: #edf2f7; color: #2b6cb0; font-size: 0.95rem; font-weight: bold; padding: 6px 12px; border-radius: 4px; margin-bottom: 20px; }
-        
-        .btn { display: inline-block; background: #2B6CB0; color: #fff; padding: 14px 28px; text-decoration: none; font-weight: bold; border-radius: 5px; font-size: 1.1rem; margin-top: 5px; }
-        .btn.dna-btn { background: #2B6CB0; }
-        .btn:hover { background: #1A365D; }
-        
-        .accordion-section { margin-top: 50px; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); padding: 10px 25px; }
-        details { border-bottom: 1px solid #edf2f7; padding: 15px 0; }
-        details:last-of-type { border-bottom: none; }
-        summary { font-size: 1.2rem; font-weight: bold; color: #1A365D; cursor: pointer; outline: none; position: relative; list-style: none; }
-        summary::-webkit-details-marker { display: none; }
-        summary::after { content: '+'; float: right; font-size: 1.4rem; color: #2B6CB0; font-weight: bold; }
-        details[open] summary::after { content: '-'; }
-        details p { margin: 15px 0 0 0; color: #4A5568; font-size: 1rem; }
-        details ul { margin: 10px 0 0 0; padding-left: 20px; color: #4A5568; }
-        details li { margin-bottom: 6px; }
-
-        /* Partner Affiliate Section Styling */
-        .partner-section { margin-top: 50px; background: #fff; padding: 35px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 5px solid #48BB78; text-align: center; }
-        .partner-section h2 { color: #1A365D; margin-top: 0; font-size: 1.8rem; }
-        .partner-section p { color: #4A5568; font-size: 1.1rem; max-width: 750px; margin: 0 auto 25px auto; }
-        .partner-features { text-align: left; max-width: 700px; margin: 0 auto 30px auto; padding-left: 0; list-style: none; }
-        .partner-features li { margin-bottom: 12px; padding-left: 15px; border-left: 3px solid #48BB78; color: #2D3748; font-size: 1rem; }
-        .btn.partner-btn { background: #48BB78; }
-        .btn.partner-btn:hover { background: #38A169; }
-        
-        .disclaimer-box { background: #edf2f7; border-left: 4px solid #718096; padding: 20px; margin-top: 50px; border-radius: 4px; }
-        .disclaimer-box p { margin: 0; font-size: 0.9rem; color: #4A5568; line-height: 1.5; }
-        
-        .footer { text-align: center; margin-top: 60px; padding: 30px; font-size: 0.9rem; color: #718096; border-top: 1px solid #e2e8f0; background: #fff; }
-    </style>
+<meta charset="utf-8">
+<style>
+    @page {
+        size: A4;
+        margin: 20mm 15mm 20mm 15mm;
+        @bottom-right {
+            content: "Page " counter(page) " of " counter(pages);
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 8pt;
+            color: #718096;
+        }
+    }
+    
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 11pt;
+        line-height: 1.6;
+        color: #2D3748;
+    }}
+    
+    .header-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 35px;
+        border-bottom: 3px solid #2B6CB0;
+        padding-bottom: 20px;
+    }
+    
+    .logo-cell {
+        width: 30%;
+        vertical-align: middle;
+    }
+    
+    .logo-img {
+        max-width: 130px;
+        height: auto;
+        display: block;
+    }
+    
+    .contact-cell {
+        width: 70%;
+        text-align: right;
+        vertical-align: middle;
+        font-size: 9.5pt;
+        color: #4A5568;
+        line-height: 1.4;
+    }
+    
+    .contact-name {
+        font-size: 13pt;
+        font-weight: bold;
+        color: #1A365D;
+        margin-bottom: 2px;
+    }
+    
+    .contact-title {
+        font-size: 9.5pt;
+        color: #2B6CB0;
+        font-weight: bold;
+        margin-bottom: 6px;
+    }
+    
+    .doc-date {
+        margin-bottom: 25px;
+        font-weight: bold;
+        color: #2D3748;
+    }
+    
+    .recipient-block {
+        margin-bottom: 30px;
+        line-height: 1.4;
+        color: #2D3748;
+    }
+    
+    .subject-line {
+        font-weight: bold;
+        font-size: 11.5pt;
+        color: #1A365D;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    
+    .letter-body {
+        margin-bottom: 35px;
+        text-align: justify;
+    }
+    
+    .letter-body p {
+        margin-top: 0;
+        margin-bottom: 16px;
+    }
+    
+    .bullet-list {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding-left: 0;
+    }
+    
+    .bullet-item {
+        margin-bottom: 14px;
+        line-height: 1.5;
+        list-style-type: none;
+        padding-left: 15px;
+        border-left: 3px solid #48BB78;
+    }
+    
+    .bullet-title {
+        font-weight: bold;
+        color: #1A365D;
+    }
+    
+    .closing-block {
+        margin-top: 35px;
+        line-height: 1.4;
+        page-break-inside: avoid;
+    }
+    
+    .signature-space {
+        height: 50px;
+    }
+    
+    .footer-note {
+        margin-top: 60px;
+        border-top: 1px solid #E2E8F0;
+        padding-top: 12px;
+        text-align: center;
+        font-size: 8pt;
+        color: #A0AEC0;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-weight: bold;
+    }
+</style>
 </head>
 <body>
 
-    <header>
-        <div class="logo-container">
-            <img src="mglLogo.png" alt="My Genome Life LLC Logo" class="logo-img">
-        </div>
-        <h1>My Genome Life LLC</h1>
-        <p>Strategic Genomic Solutions & Certified Mobile Collections</p>
-        <div class="badge">Veteran Owned & Operated</div>
-    </header>
+    <table class="header-table">
+        <tr>
+            <td class="logo-cell">
+                <img class="logo-img" src="data:image/jpeg;base64,..." alt="My Genome Life Logo">
+            </td>
+            <td class="contact-cell">
+                <div class="contact-name">My Genome Life LLC</div>
+                <div class="contact-title">Clayton Kilgore &bull; Genomic Research Specialist</div>
+                <div>Phone/Text: 409-904-6424</div>
+                <div>Email: mygenomelife@gmail.com</div>
+                <div>Web: mygenomelife.com</div>
+            </td>
+        </tr>
+    </table>
 
-    <div class="container">
+    <div class="doc-date">May 24, 2026</div>
 
-        <div class="split-grid">
-            <div class="service-card">
-                <div>
-                    <h2>Mobile Legal DNA Services</h2>
-                    <p>Professional, certified Chain of Custody sample collection delivered directly to private law offices, residences, or business locations across the Houston-Galveston metropolitan area.</p>
-                    <div class="hours-badge">Available: 8:00 AM – 10:00 PM (7 Days a Week)</div>
-                </div>
-                <div>
-                    <a href="tel:4099046424" class="btn">Schedule Collection</a>
-                </div>
-            </div>
-
-            <div class="service-card dna">
-                <div>
-                    <h2>Human-Verified Raw Data Audits</h2>
-                    <p>Custom manual analysis of your existing 23andMe or MyHeritage raw data text files. We bypass automated software templates to map your exact variants and actionable lifestyle workarounds.</p>
-                    <div class="hours-badge">Available: 8:00 AM – 10:00 PM (7 Days a Week)</div>
-                </div>
-                <div>
-                    <a href="tel:4099046424" class="btn dna-btn">Submit Raw Data</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-section">
-            <details>
-                <summary>How Our Raw Data Audits Work</summary>
-                <p>Automated reporting platforms generate static, computer-generated text walls. We manually audit your raw data text files point-by-point to evaluate your structural configuration, verify variants, and cross-reference indicators with your day-to-day health routines.</p>
-            </details>
-            <details>
-                <summary>Service Packages & Pricing</summary>
-                <p>We provide clear, tiered pricing structures based on the depth of your manual review:</p>
-                <ul>
-                    <li><strong>Foundational Methylation ($150):</strong> Focused manual audit of 4 essential genetic markers including MTHFR, COMT, APOE, and core Homocysteine processing.</li>
-                    <li><strong>Comprehensive Variant Audit ($399):</strong> Full exploration of 10 strategic lifestyle pathways, including dopamine receptors, adrenaline responses, caffeine clearance speed, vitamin D3 absorption efficiency, plant oxalate sensitivities, and dietary fat processing.</li>
-                    <li><strong>Circadian & Metabolic Panel (+$75 Add-On):</strong> Specialized upgrade analyzing target sleep and blood sugar pathways, including the CLOCK gene, melatonin receptor sensitivity, morning adrenaline triggers, and the TCF7L2 gene configuration.</li>
-                </ul>
-            </details>
-            <details>
-                <summary>Understanding Genetic Blueprints</summary>
-                <p>Think of your DNA as a blueprint for building a house. The blueprint outlines the structural frame, but it does not select the final building components. It is entirely up to you whether you build with low-grade materials or sturdy bricks, mortar, and premium tile. Your raw data is just the paperwork—your vitamins, custom nutrients, diet choices, and environment act as the physical building materials that determine how that house actually stands.</p>
-            </details>
-            <details>
-                <summary>Genes Are Tendencies, Not Certainties</summary>
-                <p>Your raw data tracks genetic vulnerabilities, not your absolute physical destiny. For instance, many individuals carrying the highest-risk Alzheimer's markers maintain pristine cognitive sharpness and never develop the condition. Similarly, some people with MTHFR variations process synthetic folic acid seamlessly with zero issues. Your body possesses biological switches that can be flipped on or off through proper workarounds.</p>
-            </details>
-        </div>
-
-        <div class="partner-section">
-            <h2>Direct Consumer Health & Wellness Lab Testing</h2>
-            <p>Take control of your health with private, direct-access lab testing. Through our strategic partnership, you can order over 2,000 routine blood panels, hormone trackers, and fitness tests online at up to 90% off traditional hospital billing—no insurance or doctor's prescription required.</p>
-            <ul class="partner-features">
-                <li><strong>Select Your Tests Online:</strong> Shop securely for individual tests or comprehensive health panels using our direct portal link below.</li>
-                <li><strong>Choose a Local Lab:</strong> Complete your sample collection at any of our convenient partner Quest Diagnostics patient service centers.</li>
-                <li><strong>Fast, Private Results:</strong> Secure digital results are delivered directly to your private online dashboard within 24 to 48 hours.</li>
-            </ul>
-            <a href="https://www.ultalabtests.com/partners/mygenomelifellc" target="_blank" class="btn partner-btn">Browse & Order Lab Tests</a>
-        </div>
-
-        <div class="disclaimer-box">
-            <p><strong>Informational Disclaimer:</strong> My Genome Life LLC provides professional mobile collection and informational genomic data audits. The analysis, variant tracking, and lifestyle workaround insights provided on this platform are strictly for informational and educational purposes. We do not provide medical advice, diagnostic services, or treatment protocols. This service is not a substitute for professional medical evaluation, diagnosis, or advice.</p>
-        </div>
-
+    <div class="recipient-block">
+        <strong>To:</strong> Family Law Practitioners, Expecting Parents, and Private Clients<br>
+        Houston-Galveston Metropolitan Area<br>
+        Texas
     </div>
 
-    <div class="footer">
-        Strict Privacy &bull; Certified Chain of Custody &bull; Strategic Results &bull; Human Verified by a Navy Veteran
+    <div class="subject-line">Subject: Expanded Mobile Genomic Services and On-Demand DNA Collection</div>
+
+    <div class="letter-body">
+        <p>Dear Valued Client,</p>
+        
+        <p>My Genome Life LLC provides premier, on-demand mobile DNA and genomic collection services designed to bring accurate, professional testing directly to your home, workplace, or private legal office. We eliminate the administrative hassle and transit delays associated with corporate clinic visits by handling the entire process at your convenience.</p>
+        
+        <p>Our comprehensive service portfolio is structured around strict operational standards and clinical accuracy:</p>
+        
+        <div class="bullet-list">
+            <div class="bullet-item">
+                <span class="bullet-title">Mobile Early Gender Reveal Testing ($300):</span> We now offer mobile, in-home early fetal DNA gender detection through premium SneakPeek and Peek-a-Boo laboratory testing channels. Expecting parents can determine fetal gender as early as 6 weeks into pregnancy with 99.9% accuracy, completely managed in the comfort of their own home.
+            </div>
+            <div class="bullet-item">
+                <span class="bullet-title">Court-Admissible DNA Paternity Collection:</span> All legal relationship verification samples follow a rigid, documented Chain of Custody including mandatory identity verification and facial documentation, fully compliant with Texas Family Code requirements.
+            </div>
+            <div class="bullet-item">
+                <span class="bullet-title">AABB-Accredited Analysis:</span> We leverage premier, accredited partner laboratories to guarantee that all relationship diagnostics stand up with absolute legal validity in Texas family courts and state child support proceedings.
+            </div>
+        </div>
+        
+        <p>Whether you require definitive legal relationship verification for an ongoing court proceeding or a private, premium early gender reveal collection at your residence, our mobile service delivers immediate, secure results.</p>
+    </div>
+
+    <div class="closing-block">
+        Sincerely,<br>
+        <div class="signature-space"></div>
+        <strong>Clayton Kilgore</strong><br>
+        Managing Director, My Genome Life LLC<br>
+        Web: mygenomelife.com
+    </div>
+
+    <div class="footer-note">
+        Strict Privacy &bull; Certified Chain of Custody &bull; Veteran Owned &bull; Strategic Results. Human Verified.
     </div>
 
 </body>
