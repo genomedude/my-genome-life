@@ -90,25 +90,25 @@
     font-weight: 300;
   }
 
-  /* WHY CLIENTS CHOOSE US (TRUST STATS GRID) */
-  .trust-stats-section {
+  /* TRUST GRID */
+  .trust-section {
     margin-bottom: 40px;
   }
 
-  .trust-stats-grid {
+  .trust-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
   }
 
   @media (max-width: 992px) {
-    .trust-stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .trust-grid { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 576px) {
-    .trust-stats-grid { grid-template-columns: 1fr; }
+    .trust-grid { grid-template-columns: 1fr; }
   }
 
-  .stat-card {
+  .trust-card {
     background: var(--white);
     padding: 25px 20px;
     border-radius: var(--radius);
@@ -118,34 +118,34 @@
     transition: var(--transition);
   }
 
-  .stat-card:hover {
+  .trust-card:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
   }
 
-  .stat-card .stat-icon {
-    font-size: 2.2rem;
-    margin-bottom: 10px;
+  .trust-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
     display: block;
   }
 
-  .stat-card .stat-value {
+  .trust-title {
     font-family: var(--font-serif);
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--navy);
     line-height: 1.2;
     margin-bottom: 4px;
   }
 
-  .stat-card .stat-label {
+  .trust-desc {
     font-size: 0.9rem;
     color: var(--text-muted);
     font-weight: 500;
   }
 
-  /* BRAND VALUES ICON BADGES ROW */
-  .brand-badges-row {
+  /* BRAND VALUE BADGES */
+  .value-badges {
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -153,33 +153,27 @@
     flex-wrap: wrap;
   }
 
-  .brand-badge-item {
+  .value-badge {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    gap: 10px;
     background: var(--white);
-    padding: 15px 25px;
+    padding: 12px 24px;
     border-radius: 50px;
     box-shadow: var(--shadow-sm);
-    min-width: 180px;
-    text-align: center;
-  }
-
-  .brand-badge-item .badge-icon {
-    font-size: 1.8rem;
-    margin-bottom: 4px;
-  }
-
-  .brand-badge-item .badge-label {
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--navy-mid);
   }
 
+  .value-badge .badge-icon {
+    font-size: 1.2rem;
+  }
+
   /* MAIN LAYOUT CONTAINER */
   .container {
     max-width: 1100px;
-    margin: -40px auto 60px;
+    margin: 0 auto 60px;
     padding: 0 20px;
     position: relative;
     z-index: 10;
@@ -202,25 +196,25 @@
     margin-bottom: 20px;
   }
 
-  .blueprint-text-block {
+  .blueprint-block {
     margin-bottom: 24px;
   }
 
-  .blueprint-text-block:last-of-type { margin-bottom: 0; }
+  .blueprint-block:last-of-type { margin-bottom: 0; }
 
-  .blueprint-text-block p {
+  .blueprint-block p {
     color: var(--text-dark);
     font-size: 1.1rem;
     margin-bottom: 12px;
   }
 
-  .blueprint-text-block strong {
+  .blueprint-block strong {
     color: var(--navy-mid);
     font-weight: 600;
   }
 
   /* COMPARISON SECTION */
-  .comparison-container {
+  .comparison-section {
     background: var(--white);
     padding: 45px;
     border-radius: var(--radius);
@@ -229,7 +223,7 @@
     border-top: 4px solid var(--teal);
   }
 
-  .comparison-container h2 {
+  .comparison-section h2 {
     font-family: var(--font-serif);
     color: var(--navy);
     font-size: 2rem;
@@ -335,7 +329,7 @@
     gap: 40px;
   }
 
-  .service-row-card {
+  .service-card {
     background: var(--white);
     border-radius: var(--radius);
     box-shadow: var(--shadow-md);
@@ -344,11 +338,11 @@
     padding: 40px;
   }
 
-  .service-row-card.dna-style {
+  .service-card.dna-style {
     border-top-color: var(--blue);
   }
 
-  .service-row-card h2 {
+  .service-card h2 {
     font-family: var(--font-serif);
     color: var(--navy);
     font-size: 2.2rem;
@@ -360,38 +354,38 @@
     gap: 12px;
   }
 
-  .service-row-card h2 .title-icon {
+  .service-card h2 .title-icon {
     font-size: 2rem;
   }
 
-  .service-intro-text {
+  .service-intro {
     font-size: 1.1rem;
     color: var(--text-dark);
     margin-bottom: 30px;
     max-width: 850px;
   }
 
-  /* NESTED CONTENT BOXES */
-  .info-box-grid {
+  /* NESTED PANEL CONTENT */
+  .panel-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 24px;
     margin-bottom: 30px;
   }
 
-  .info-box-panel {
+  .panel-box {
     background: var(--cream);
     border-left: 4px solid var(--navy-mid);
     padding: 24px;
     border-radius: 4px;
   }
 
-  .info-box-panel.accent-panel {
+  .panel-box.accent-box {
     border-left-color: var(--teal);
     background: #F0FDF4;
   }
 
-  .info-box-panel h3 {
+  .panel-box h3 {
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--navy);
@@ -407,25 +401,25 @@
     font-size: 1.3rem;
   }
 
-  .info-box-panel p {
+  .panel-box p {
     font-size: 1rem;
     color: var(--text-dark);
   }
 
-  .info-box-panel ul {
+  .panel-box ul {
     margin-top: 12px;
     padding-left: 20px;
   }
 
-  .info-box-panel ul li {
+  .panel-box ul li {
     margin-bottom: 8px;
     font-size: 1rem;
   }
 
-  .info-box-panel ul li:last-child { margin-bottom: 0; }
+  .panel-box ul li:last-child { margin-bottom: 0; }
 
   /* ACCORDION / DETAILS */
-  .details-wrapper {
+  .accordion-group {
     background: var(--white);
     border: 1px solid var(--warm-grey);
     border-radius: 6px;
@@ -453,17 +447,17 @@
     background: var(--cream);
   }
 
-  .details-content {
+  .details-body {
     padding: 0 20px 20px 20px;
     color: var(--text-dark);
     font-size: 1rem;
   }
 
-  .details-content p { margin-bottom: 12px; }
-  .details-content p:last-child { margin-bottom: 0; }
+  .details-body p { margin-bottom: 12px; }
+  .details-body p:last-child { margin-bottom: 0; }
 
-  /* BUTTON SYSTEM */
-  .btn-action {
+  /* BUTTONS */
+  .btn-primary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -478,23 +472,23 @@
     box-shadow: var(--shadow-sm);
   }
 
-  .btn-action:hover {
+  .btn-primary:hover {
     background: var(--navy);
     transform: translateY(-1px);
   }
 
-  .btn-action.disabled-btn {
+  .btn-primary.disabled {
     background: #A0AEC0;
     cursor: not-allowed;
   }
   
-  .btn-action.disabled-btn:hover {
+  .btn-primary.disabled:hover {
     transform: none;
     background: #A0AEC0;
   }
 
-  /* ACCORDION TABS OUTSIDE CARDS */
-  .bottom-accordion-section {
+  /* BOTTOM ACCORDIONS */
+  .bottom-accordions {
     margin-top: 50px;
     background: var(--white);
     border-radius: var(--radius);
@@ -502,34 +496,34 @@
     padding: 15px 30px;
   }
 
-  /* TRUST BADGE WRAPPER */
-  .badge-verification-block {
+  /* CHECKR VERIFICATION BADGE */
+  .trust-badge-container {
     text-align: center;
     margin-top: 25px;
     padding-top: 20px;
     border-top: 1px dashed var(--warm-grey);
   }
 
-  .badge-verification-block p {
+  .trust-badge-container p {
     font-size: 0.95rem;
     color: var(--text-dark);
     margin-bottom: 12px;
     font-weight: 600;
   }
 
-  .badge-verification-block img {
+  .trust-badge-container img {
     max-width: 170px;
     height: auto;
     display: inline-block;
     transition: var(--transition);
   }
 
-  .badge-verification-block img:hover {
+  .trust-badge-container img:hover {
     transform: scale(1.03);
   }
 
-  /* CALL TO ACTION CONTAINER PANEL */
-  .main-cta-container {
+  /* CENTRAL BANNER BUTTON ROW */
+  .cta-section {
     background: var(--white);
     padding: 40px;
     border-radius: var(--radius);
@@ -539,27 +533,27 @@
     border-top: 4px solid var(--teal);
   }
 
-  .main-cta-container h3 {
+  .cta-section h3 {
     font-family: var(--font-serif);
     font-size: 1.8rem;
     color: var(--navy);
     margin-bottom: 12px;
   }
 
-  .main-cta-container p {
+  .cta-section p {
     font-size: 1.1rem;
     color: var(--text-muted);
     margin-bottom: 25px;
   }
 
-  .cta-buttons-row {
+  .cta-actions-row {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
   }
 
-  .cta-btn {
+  .action-banner-btn {
     display: inline-flex;
     align-items: center;
     padding: 14px 28px;
@@ -570,21 +564,21 @@
     transition: var(--transition);
   }
 
-  .cta-btn.phone-btn {
+  .action-banner-btn.phone-btn {
     background-color: var(--blue);
     color: var(--white);
   }
 
-  .cta-btn.phone-btn:hover {
+  .action-banner-btn.phone-btn:hover {
     background-color: var(--navy);
   }
 
-  .cta-btn.email-btn {
+  .action-banner-btn.email-btn {
     background-color: var(--charcoal);
     color: var(--white);
   }
 
-  .cta-btn.email-btn:hover {
+  .action-banner-btn.email-btn:hover {
     background-color: var(--text-dark);
   }
 
@@ -599,7 +593,7 @@
     background: var(--white);
   }
 
-  .disclaimer-box {
+  .footer-disclaimer {
     max-width: 900px;
     margin: 0 auto 25px;
     text-align: justify;
@@ -622,59 +616,59 @@
   <p class="tagline-secondary">Strategic Genomic Solutions &amp; Certified Mobile Collections Across Houston-Galveston</p>
 </header>
 
-<div class="container">
+<div class="container" style="margin-top: -40px;">
 
-  <section class="brand-badges-row">
-    <div class="brand-badge-item">
+  <section class="value-badges">
+    <div class="value-badge">
       <span class="badge-icon">🎖️</span>
-      <span class="badge-label">Veteran Operated</span>
+      <span>Veteran Operated</span>
     </div>
-    <div class="brand-badge-item">
+    <div class="value-badge">
       <span class="badge-icon">🛡️</span>
-      <span class="badge-label">Fully Insured</span>
+      <span>Fully Insured</span>
     </div>
-    <div class="brand-badge-item">
-      <span class="badge-icon">✓</span>
-      <span class="badge-label">Background Checked</span>
+    <div class="value-badge">
+      <span class="badge-icon">🔬</span>
+      <span>AABB Accredited Testing</span>
     </div>
   </section>
 
-  <section class="trust-stats-section">
-    <div class="trust-stats-grid">
-      <div class="stat-card">
-        <span class="stat-icon">👶</span>
-        <div class="stat-value">8 Weeks</div>
-        <div class="stat-label">Earliest Fetal Testing</div>
+  <section class="trust-section">
+    <div class="trust-grid">
+      <div class="trust-card">
+        <span class="trust-icon">👶</span>
+        <div class="trust-title">8 Weeks</div>
+        <div class="trust-desc">Earliest Fetal Testing</div>
       </div>
-      <div class="stat-card">
-        <span class="stat-icon">🧬</span>
-        <div class="stat-value">99.9%</div>
-        <div class="stat-label">Lab Precision Guaranteed</div>
+      <div class="trust-card">
+        <span class="trust-icon">🧬</span>
+        <div class="trust-title">99.9%</div>
+        <div class="trust-desc">Lab Precision Guaranteed</div>
       </div>
-      <div class="stat-card">
-        <span class="stat-icon">🚫</span>
-        <div class="stat-value">Zero AI</div>
-        <div class="stat-label">Pure Human-Verified Audits</div>
+      <div class="trust-card">
+        <span class="trust-icon">🚫</span>
+        <div class="trust-title">Zero AI</div>
+        <div class="trust-desc">Pure Human-Verified Audits</div>
       </div>
-      <div class="stat-card">
-        <span class="stat-icon">💼</span>
-        <div class="stat-value">Certified</div>
-        <div class="stat-label">Court-Admissible Collections</div>
+      <div class="trust-card">
+        <span class="trust-icon">⚖️</span>
+        <div class="trust-title">Court Valid</div>
+        <div class="trust-desc">Certified Legal Collections</div>
       </div>
     </div>
   </section>
 
   <section class="blueprint-section">
     <h2>Your Genetics Are Not Your Destiny</h2>
-    <div class="blueprint-text-block">
+    <div class="blueprint-block">
       <p><strong>The House Blueprint Analogy:</strong> Think of your DNA as a blueprint for building a house. The blueprint outlines the structural frame, but it does not select the actual materials. It is completely up to you whether you build with cheap components or heavy bricks, mortar, and premium tile. Your raw genetic data is just the paperwork—your vitamins, targeted nutrients, diet, and lifestyle choices are the actual building materials that determine how strong that house stands.</p>
     </div>
-    <div class="blueprint-text-block">
+    <div class="blueprint-block">
       <p><strong>Genes Are Tendencies, Not Promises:</strong> Your DNA data only tracks raw vulnerabilities, not your physical reality. For example, many individuals carrying the highest-risk Alzheimer's genes live long, completely sharp lives and never develop the condition. Similarly, some people with MTHFR mutations process synthetic folic acid seamlessly with zero issues. Even if your genes report a specific tendency, you possess custom biological switches that can be flipped on or off through proper workarounds.</p>
     </div>
   </section>
 
-  <section class="comparison-container">
+  <section class="comparison-section">
     <h2>Mobile Service Comparison: DNA Testing vs. Ultrasound Scanning for Determining Biological Sex of Fetus</h2>
     <p class="comparison-subtitle">Before booking your mobile home appointment, understand the critical differences between molecular testing and camera imaging.</p>
     
@@ -686,7 +680,7 @@
           <li><strong>One Test, One Time:</strong> No scheduling logjams or repetitive visits. We come out once, collect the sample, and the job is done.</li>
           <li><strong>99.9% Accuracy &amp; 100% Money-Back Guarantee:</strong> We isolate actual cell-free fetal DNA to detect the male Y-chromosome. Because we analyze your genes directly, the physical position of the baby has zero impact on your final results.</li>
           <li><strong>No Visual Optical Illusions:</strong> We look past the skin surface to read raw chromosomes. There are no swelling errors, shadow mix-ups, or human guessing variables.</li>
-          <li><strong>Preserves the Surprise:</strong> Results return securely from the lab inside an opaque, sealed envelope. Your reveal party surprise remains completely safe until you break the seal.</li>
+          <li><strong>Preserves the Surprise:</strong> Results return securely from the lab inside an opaque, sealed envelope. Your reveal party surprise remains completely safe until you choose to break the seal.</li>
         </ul>
       </div>
       
@@ -710,17 +704,17 @@
 
   <div class="services-stack">
 
-    <section class="service-row-card dna-style">
+    <section class="service-card dna-style">
       <h2><span class="title-icon">🍼</span>1. Early Fetal Gender Reveal Testing</h2>
-      <p class="service-intro-text">Discover your baby's gender early with absolute clinical accuracy in the comfort and privacy of your own home. We provide specialized on-demand mobile sample collection across the Houston-Galveston metropolitan area with an emphasis on maternal safety and strict contamination barriers.</p>
+      <p class="service-intro">Discover your baby's gender early with absolute clinical accuracy in the comfort and privacy of your own home. We provide specialized on-demand mobile sample collection across the Houston-Galveston metropolitan area with an emphasis on maternal safety and strict contamination barriers.</p>
       
-      <div class="info-box-grid">
-        <div class="info-box-panel accent-panel">
+      <div class="panel-grid">
+        <div class="panel-box accent-box">
           <h3>Mobile Gender Reveal Service <span class="panel-price">$300</span></h3>
           <p>On-demand mobile in-home DNA collection utilizing premium SneakPeek and Peek-a-Boo laboratory channels. Highly accurate fetal gender determination as early as 8 weeks into pregnancy, completely managed at your residence.</p>
         </div>
 
-        <div class="info-box-panel">
+        <div class="panel-box">
           <h3>Our Process &amp; Surprise Preservation Guarantee</h3>
           <p>We handle the entire sequencing pipeline to protect the element of surprise for your family milestone or reveal party:</p>
           <ul>
@@ -730,7 +724,7 @@
           </ul>
         </div>
 
-        <div class="info-box-panel">
+        <div class="panel-box">
           <h3>Strict Zero-Contamination Protocols</h3>
           <p>Maternal environments are highly susceptible to ambient male DNA contamination (from skin dander or pets) which triggers false "Boy" readings. We completely eliminate this risk by enforcing laboratory-grade field controls:</p>
           <ul>
@@ -740,7 +734,7 @@
           </ul>
         </div>
 
-        <div class="info-box-panel">
+        <div class="panel-box">
           <h3>Ironclad Security &amp; Comfort Measures</h3>
           <ul>
             <li><strong>Verified Background Clearance:</strong> A live, clickable link to our clean background screening check is automatically available below.</li>
@@ -748,7 +742,7 @@
             <li><strong>Open Door Environment:</strong> We actively encourage our clients to invite a spouse, partner, relative, or friend to be present in the room during the entire collection process.</li>
           </ul>
           
-          <div class="badge-verification-block">
+          <div class="trust-badge-container">
             <p>Click the official badge below to view my live, verified background check checkmarks:</p>
             <a href="https://checkr.com/profiles/u/627c5076-3008-48b7-a238-210859bbeeeb?_ref=embed_badge" target="_blank">
               <img src="https://checkr.com/profiles/u/627c5076-3008-48b7-a238-210859bbeeeb/verified_badge?_ref=embed_badge" alt="Checkr Profile Verified Badge" />
@@ -757,10 +751,10 @@
         </div>
       </div>
 
-      <div class="details-wrapper">
+      <div class="accordion-group">
         <details>
           <summary>Understanding Accuracy &amp; Contamination Risks</summary>
-          <div class="details-content">
+          <div class="details-body">
             <p><strong>The Hidden 50/50 Risk of DIY Home Testing:</strong> When expectant mothers purchase retail boxes to perform a test by themselves at home, there is a massive risk of receiving a false report. Because roughly 51% of live births are naturally male, a contaminated home test can look right half the time purely by chance—but if you are carrying a baby girl, the home environment is a major statistical trap.</p>
             <p><strong>How Contamination Overrides Results:</strong> Early gender testing looks for tiny fragments of male Y-chromosomes floating in the mother's blood. If your skin isn't perfectly sterile, or if there is ambient male DNA from a husband, a son, a male dog, a cat, or a bird floating in the air or sitting on a household counters, those microscopic cells will contaminate your sample. This automatically triggers a false "Boy" reading when a baby girl is actually growing inside you. Out of all recorded retail testing errors, over 98% are false boy results caused by home contamination.</p>
             <p><strong>The My Genome Life Advantage:</strong> Having our professional mobile service manage your appointment does not completely eliminate every biological variable, but it highly eliminates the possibility of an environmental false male reading. We apply full chemical decontamination to the testing surface and enforce multi-layer sterile barrier controls to insulate your sample and protect the purity of your true results.</p>
@@ -769,21 +763,21 @@
       </div>
 
       <div style="margin-top: 30px;">
-        <a href="tel:4099046424" class="btn-action">Schedule Gender Reveal</a>
+        <a href="tel:4099046424" class="btn-primary">Schedule Gender Reveal</a>
       </div>
     </section>
 
-    <section class="service-row-card dna-style">
+    <section class="service-card dna-style">
       <h2><span class="title-icon">🔬</span>2. Human-Verified Raw Data Audits</h2>
       
       <p style="font-size: 1.15rem; color: #1A365D; line-height: 1.6; margin-bottom: 25px; padding: 20px; background-color: #edf2f7; border-left: 4px solid var(--blue); border-radius: 4px;">
         We offer custom, manual analysis of your existing raw DNA data text files downloaded directly from <strong>AncestryDNA, 23andMe, or MyHeritage</strong>. Every individual file from these consumer platforms contains over <strong>600,000 specific genetic lines</strong> that we painstakingly cross-reference and double-check. Furthermore, if you are step-up upgrading to an evaluation of your entire, comprehensive genomic profile, there are over <strong>3 billion chemical base pairs</strong> for us to reference and analyze with manual human precision.
       </p>
 
-      <p class="service-intro-text"><strong>The Industry Automation Flaw:</strong> Almost every other company performing genetic audits relies entirely on automated, computer-generated software templates or blind AI loops. They pass your data through a standard program and hand you a text wall without human oversight. We bypass computer automation entirely—every single marker review we deliver is manually text-audited, verified, and double-checked by a specialist to isolate your exact variants and map clean, logical lifestyle workarounds.</p>
+      <p class="service-intro"><strong>The Industry Automation Flaw:</strong> Almost every other company performing genetic audits relies entirely on automated, computer-generated software templates or blind AI loops. They pass your data through a standard program and hand you a text wall without human oversight. We bypass computer automation entirely—every single marker review we deliver is manually text-audited, verified, and double-checked by a specialist to isolate your exact variants and map clean, logical lifestyle workarounds.</p>
       
-      <div class="info-box-grid">
-        <div class="info-box-panel accent-panel">
+      <div class="panel-grid">
+        <div class="panel-box accent-box">
           <h3>Foundational Methylation <span class="panel-price">$150</span></h3>
           <p>A manual line-by-line review of 4 critical genetic markers affecting baseline mental and physical energy production, protecting your insights from automated software errors:</p>
           <ul>
@@ -794,7 +788,7 @@
           </ul>
         </div>
 
-        <div class="info-box-panel accent-panel">
+        <div class="panel-box accent-box">
           <h3>Comprehensive Data Audit <span class="panel-price">$399</span></h3>
           <p>A deep, manual exploration bypassing all automated computer algorithms to rigorously examine 10 strategic lifestyle, trait, and nutritional pathways:</p>
           <ul>
@@ -808,7 +802,7 @@
           </ul>
         </div>
 
-        <div class="info-box-panel">
+        <div class="panel-box">
           <h3>Circadian &amp; Metabolic Add-On <span class="panel-price">+$75</span></h3>
           <p>Focused human-verified upgrade mapping 4 vital sleep and blood sugar pathways:</p>
           <ul>
@@ -821,21 +815,21 @@
       </div>
 
       <div>
-        <a href="tel:4099046424" class="btn-action">Submit Raw Data</a>
+        <a href="tel:4099046424" class="btn-primary">Submit Raw Data</a>
       </div>
     </section>
 
-    <section class="service-row-card">
+    <section class="service-card">
       <h2><span class="title-icon">⚖️</span>3. Mobile Legal DNA Services</h2>
-      <p class="service-intro-text">We resolve the logistical hassle of court testing by delivering professional, certified sample collection directly to your private law office, home, or business location across the Houston-Galveston metropolitan area.</p>
+      <p class="service-intro">We resolve the logistical hassle of court testing by delivering professional, certified sample collection directly to your private law office, home, or business location across the Houston-Galveston metropolitan area.</p>
       
-      <div class="info-box-grid">
-        <div class="info-box-panel">
+      <div class="panel-grid">
+        <div class="panel-box">
           <h3>Strict Chain of Custody</h3>
           <p>Full identity verification, formal documentation, fingerprinting, and facial photographs compliant with Texas Family Code requirements.</p>
         </div>
 
-        <div class="info-box-panel">
+        <div class="panel-box">
           <h3>Comprehensive Legal &amp; Relationship Profiles Available</h3>
           <p>We manage professional field dispatches for a wide variety of court-admissible and personal validation needs:</p>
           <ul>
@@ -848,50 +842,50 @@
           </ul>
         </div>
 
-        <div class="info-box-panel">
+        <div class="panel-box">
           <h3>AABB-Accredited Analysis</h3>
           <p>All laboratory testing is executed through elite partner facilities to ensure results are 100% valid for family courts, custody, and child support proceedings.</p>
         </div>
       </div>
 
       <div>
-        <a href="tel:4099046424" class="btn-action disabled-btn">Coming Soon</a>
+        <a href="tel:4099046424" class="btn-primary disabled">Coming Soon</a>
       </div>
     </section>
 
-    <section class="service-row-card">
+    <section class="service-card">
       <h2><span class="title-icon">🧪</span>4. Mobile Drug Testing</h2>
-      <p class="service-intro-text">Professional, certified field-collection drug testing services designed for corporate compliance, workplace screening, and legal mandates across the Houston-Galveston metropolitan area.</p>
+      <p class="service-intro">Professional, certified field-collection drug testing services designed for corporate compliance, workplace screening, and legal mandates across the Houston-Galveston metropolitan area.</p>
       
-      <div class="info-box-grid">
-        <div class="info-box-panel">
+      <div class="panel-grid">
+        <div class="panel-box">
           <h3>On-Site Testing Solutions</h3>
           <p>We are currently engineering a robust suite of fast, highly certified forensic collection options to bring laboratory-grade accountability straight to your corporate offices or field locations.</p>
         </div>
         
-        <div class="info-box-panel">
+        <div class="info-box-panel" style="background-color: var(--cream); border-left: 4px solid var(--navy-mid); padding: 24px; border-radius: 4px;">
           <h3>Certified Workplace Compliance Protocols</h3>
           <p>Full operations, specialized panel structures, and corporate volume packages are being finalized to meet strict regulatory and defense requirements.</p>
         </div>
       </div>
 
       <div>
-        <a href="tel:4099046424" class="btn-action disabled-btn">Coming Soon</a>
+        <a href="tel:4099046424" class="btn-primary disabled">Coming Soon</a>
       </div>
     </section>
 
   </div>
 
-  <div class="bottom-accordion-section">
+  <div class="bottom-accordions">
     <details>
       <summary>How Our Raw Data Audits Work</summary>
-      <div class="details-content">
+      <div class="details-body">
         <p>Automated reporting platforms generate static, computer-generated text walls. We manually audit your raw data text files point-by-point to evaluate your structural configuration, verify variants, and cross-reference indicators with your day-to-day health routines.</p>
       </div>
     </details>
     <details>
       <summary>Service Packages &amp; Pricing Summary</summary>
-      <div class="details-content">
+      <div class="details-body">
         <p>We provide clear, tiered pricing structures based on the depth of your manual review:</p>
         <ul style="padding-left:20px; margin-top:8px;">
           <li><strong>Early Fetal Gender Reveal ($300):</strong> Mobile in-home collection for premium SneakPeek and Peek-a-Boo testing as early as 8 weeks.</li>
@@ -903,31 +897,31 @@
     </details>
     <details>
       <summary>The Structural Frame: Blueprints vs Building Components</summary>
-      <div class="details-content">
+      <div class="details-body">
         <p>Think of your DNA as a blueprint for building a house. The blueprint outlines the structural frame, but it does not select the final building components. It is entirely up to you whether you build with low-grade materials or sturdy bricks, mortar, and premium tile. Your raw data is just the paperwork—your vitamins, custom nutrients, diet choices, and environment act as the physical building materials that determine how that house actually stands.</p>
       </div>
     </details>
     <details>
       <summary>Statistical Realities: Genes Are Tendencies, Not Certainties</summary>
-      <div class="details-content">
+      <div class="details-body">
         <p>Your raw data tracks genetic vulnerabilities, not your absolute physical destiny. For instance, many individuals carrying the highest-risk Alzheimer's markers maintain pristine cognitive sharpness and never develop the condition. Similarly, some people with MTHFR variations process synthetic folic acid seamlessly with zero issues. Your body possesses biological switches that can be flipped on or off through proper workarounds.</p>
       </div>
     </details>
   </div>
 
-  <section class="main-cta-container">
+  <section class="cta-section">
     <h3>Ready to Get Started?</h3>
     <p>Book your professional mobile collection or submit your raw data file today. Call, text, or email to schedule your appointment.</p>
-    <div class="cta-buttons-row">
-      <a href="tel:4099046424" class="cta-btn phone-btn">Call or Text: 409-904-6424</a>
-      <a href="mailto:mygenomelife@gmail.com" class="cta-btn email-btn">Email: mygenomelife@gmail.com</a>
+    <div class="cta-actions-row">
+      <a href="tel:4099046424" class="action-banner-btn phone-btn">Call or Text: 409-904-6424</a>
+      <a href="mailto:mygenomelife@gmail.com" class="action-banner-btn email-btn">Email: mygenomelife@gmail.com</a>
     </div>
   </section>
 
 </div>
 
 <footer>
-  <div class="disclaimer-box">
+  <div class="footer-disclaimer">
     <strong>Informational Disclaimer:</strong> My Genome Life LLC provides professional mobile collection and informational genomic data audits. The analysis, variant tracking, and lifestyle workaround insights provided on this platform are strictly for informational and educational purposes. We do not provide medical advice, diagnostic services, or treatment protocols. This service is not a substitute for professional medical evaluation, diagnosis, or advice.
   </div>
   <p>© 2026 My Genome Life LLC · Houston–Galveston, TX · 409-904-6424 · mygenomelife@gmail.com</p>
